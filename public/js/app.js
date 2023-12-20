@@ -6,9 +6,14 @@ for (let el of movieList.children) {
 
 let addMovieBtn = document.getElementById("add-movie-btn");
 let movieForm = document.getElementById("movieForm");
+let cancelBtn = document.getElementById("cancel");
 addMovieBtn.addEventListener("click", addClickHandler);
-
+cancelBtn.addEventListener("click", cancelClickHandler);
 function addClickHandler(){
   addMovieBtn.classList.add("d-none");
   movieForm.classList.remove("d-none");
+}
+function cancelClickHandler () {
+  addMovieBtn.classList.remove("d-none")
+  movieForm.classList.add("d-none");
 }
