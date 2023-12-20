@@ -12,6 +12,7 @@ let addNewMovieButton = document.getElementById('addNewMovieButton');
 addNewMovieButton.addEventListener('click', addNewMovie);
 addMovieBtn.addEventListener('click', toggleNewMovieForm);
 cancelBtn.addEventListener('click', toggleNewMovieForm);
+
 function toggleNewMovieForm() {
   addMovieBtn.classList.toggle('d-none');
   movieForm.classList.toggle('d-none');
@@ -19,5 +20,10 @@ function toggleNewMovieForm() {
 
 function addNewMovie() {
   let movieName = inputField.value;
-  console.log(movieName);
+  let movieListItem = document.createElement("li");
+  movieListItem.innerText = movieName;
+  movieListItem.classList.add("list-group-item");
+  movieList.append(movieListItem);
+   toggleNewMovieForm();
+   inputField.value = "";
 }
