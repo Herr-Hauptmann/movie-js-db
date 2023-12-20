@@ -26,9 +26,16 @@
       <button class="btn btn-primary w-100" id="add-movie-btn">
         Dodaj film
       </button>
-      <form class="my3 d-none" id="movieForm">
+      <form class="my-3 d-none" id="movieForm">
         <label for="movieName" class="form-label">Unesi naziv filma</label>
-        <input id="movieName" class="form-control" type="text" />
+        <input id="movieName" class="form-control d-inline" type="text" />
+        <button
+          type="button"
+          class="btn btn-success mt-2 d-block"
+          id="addNewMovieButton"
+        >
+          Dodaj
+        </button>
         <button type="reset" class="btn btn-danger w-100 mt-2" id="cancel">
           Odustani
         </button>

@@ -7,13 +7,17 @@ for (let el of movieList.children) {
 let addMovieBtn = document.getElementById('add-movie-btn');
 let movieForm = document.getElementById('movieForm');
 let cancelBtn = document.getElementById('cancel');
-addMovieBtn.addEventListener('click', addClickHandler);
-cancelBtn.addEventListener('click', cancelClickHandler);
-function addClickHandler() {
-  addMovieBtn.classList.add('d-none');
-  movieForm.classList.remove('d-none');
+let inputField = document.getElementById('movieName');
+let addNewMovieButton = document.getElementById('addNewMovieButton');
+addNewMovieButton.addEventListener('click', addNewMovie);
+addMovieBtn.addEventListener('click', toggleNewMovieForm);
+cancelBtn.addEventListener('click', toggleNewMovieForm);
+function toggleNewMovieForm() {
+  addMovieBtn.classList.toggle('d-none');
+  movieForm.classList.toggle('d-none');
 }
-function cancelClickHandler() {
-  addMovieBtn.classList.remove('d-none');
-  movieForm.classList.add('d-none');
+
+function addNewMovie() {
+  let movieName = inputField.value;
+  console.log(movieName);
 }
